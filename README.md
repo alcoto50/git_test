@@ -13,5 +13,5 @@ command arrow left/right: to move cursor to beginning or end of last line.<br> c
 <br> command arrow up L: selects all occurrances of current selection.
 <br> command F2: select all occurances of selected word.
 
-6/14 11am-1pm: Just finished the "Working with text" portion of HTML. I am starting to recognize patters and names. Certian <bold>Tags</bold> can be enclosed in <bold>Elements</bold>.
+6/14 11am-1pm: Just finished the "Working with text" portion of HTML. I am starting to recognize patters and names. Certian Tags can be enclosed in Elements.
 This is called nesting and to show a element that contains a nested Tag, we usually indent as a way of keeping the code uniform and organized.
