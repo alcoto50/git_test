@@ -20,8 +20,37 @@ to open the link.
     
     <br>
     <p> There are two kinds of links, <em> Absolute</em>, and <em> Relative </em>. </p>
-    <p> 1.Absolute links to other websites on the internet. The syntax scheme for an absolute link is:<em> //domain/path</em>. The absolute domain will always have the scheme and domain.</p>
+    <p> 1.Absolute links to other websites on the internet. The syntax scheme for an absolute link is:<em> //domain/path</em>. The absolute domain will always have the scheme and domain. An example of an <bold>ABSOLUTE</bold> link would be:</p> <p>https://www.theodinproject.com/about</p>
+    <p>The syntax scheme above contains the //domain.path</p>
     <br>
-    <p>2. Relative links to other pages within our own website. They do not include domain names since it is directed towards the same page. The only include the file path to the other page.</p>
+    <p>2. Relative links to other pages within our own website. They do not include the domain names since it is directed towards the site but a page. The only include the file path to the other page.</p>
+    <h1> The link below is a relative link. </h1>
+    <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+    <a href="about.html"></a>
+    
+<br>
+<h5>A Metaphore</h5>
+<p>think of your domain name (town.com) as a town, the directory in which your website is located (/museum) as a museum,
+and each page on your website as a room in the museum (/museum/movie_room.html and /museum/shops/coffee_shop.html).
+Relative links like ./shops/coffee_shop.html are directions from the current room (the museum movie room
+/museum/movie_room.html) to another room (the museum shop). Absolute links, on the other hand, are full directions
+including the protocol (https), domain name (town.com) and the path from that domain name
+(/museum/shops/coffee_shop.html): https://town.com/museum/shops/coffee_shop.html.</p>
+
+
+<h5>Images</h5>
+<p> To Display an image in HTML we use the <bold> IMG </bold> tag. Since it is a VOID element meaning it does not need a closing tag. Below is how the link will look</p>
+<img src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.chhKo9KEel7n7hi0O_cEPAHaD4%26pid%3DApi&f=1&ipt=0f0d3c7825f0f4c91b204494e443bbf27d8b17e5eee191cac75509f480456fcd&ipo=images">
+<br>
+<h5>Parent Directories</h5>
+<p>What if we want to use the dog image in the about page? We would first have to go up one level out of the pages
+directory into its parent directory so we could then access the images directory.</p>
+<p>To go to the parent directory we need to use two dots in the relative filepath like this: ../. Let’s see this in action,
+within the body of the about.html file, add the following image below the heading we added earlier:</p>
+<p> img src="../images/dog.jpg"</p>
+<ol> To break this down</ol>
+    <li> First, we are going to the parent directory of the pages directory which is odin-links-and-images.</li>
+    <li> Then, from the parent directory, we can go into the images directory.</li>
+    <li> Finally, we can access the dog.jpg file.</li>
 </body>
 </html>
