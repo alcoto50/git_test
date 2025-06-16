@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Foundations</title>
+</head>
+<body>
+    <H1>Intro to CSS</H1>
+
+    <h3><stong>Introduction</stong></h3>
+    <p>In the previous lesson, you learned how to write the HTML that determines how a web page is structured. The next step is
+    to make that structure look good with some style, which is exactly what CSS is for. In the next few lessons, we’re going
+    to focus on what we believe are some foundational CSS concepts, things that everyone should know from the beginning —
+    whether they are just starting out or need a refresher.</p>
+
+    <h3><strong>Lesson Overview</strong></h3>
+    <p>This section contains a general overview of topics that youo will learn in this lesson</p>
+
+    <li> Add styles with CSS.</li>
+    <li> Understand how to use the class and ID attributes.</li>
+    <li> Add styles to specific elements using the correct selectors.</li>
+
+    <h3><strong>Basic Syntax</strong></h3>
+    <p>At the most basic level, CSS is made up of various rules. These rules are made up of a selector (more on this in a bit)
+    and a semicolon-separated list of declarations, with each of those declarations being made up of a property–value pair.</p>
+<img src ="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg">
+<p><em>Note:</em></p> <p>A div element is one of the basic HTML elements. It is an empty container. In general, it is best to use other tags such as (h1) or (p) for content in your projects, but as we learn more about CSS you’ll find that there are many cases wherethe thing you need is just a container for other elements. Many of our exercises use plain (div)s for simplicity. Later lessons will go into much more depth about when it is appropriate to use the various HTML elements.</p>
+
+<h3><strong>Selectors</strong></h3>
+<p>Selectors refer to the HTML elements to which CSS rules apply; they’re what is actually being “selected” for each rule.
+The following subsections don’t cover every selector available, but they’re by far the most common and the ones you
+should get comfortable using first.</p>
+<h3>Universal Selector</h3>
+<p>The universal selector will select elements of every type (as in the whole document), hence the name “universal”, and
+the syntax for it is a simple asterisk. In the example below, every element would have the color: purple; style applied
+to it.</p>
+<div>
+  <p>  * {
+  <p>  color: purple;</p>
+  <p>  }</p>
+</div>
+
+<h3>Type selector</h3>
+  <p>A type selector (or element selector) will select all elements of the given element type, and the syntax is just the
+name of the element:</p>
+    <div>
+    <p><!--index.html --></p>
+    
+    <p>(div)Hello, World!(/div)</p>
+    <p>(div)Hello again!(/div)</p>
+    <p>(p)Hi..(/p)</p>
+    <p>(div)Okay, bye.(/div)</p>
+    </div>
+
+    <p>Here, all three (div) elements would be selected, while the (p) element wouldn't be.</p>
+
+    <h3><strong>Class Selector</strong></h3>
+    <p>Class selectors will select all elements with the given class, which is just an attribute you place on an HTML element.
+    Here’s how you add a class to an HTML tag and select it in CSS:</p>
+    <div>
+        <p> (!-- index.html --)</p>
+        
+        <p>(div class="alert-text") Please agree to our terms of service.)</p>
+        <p>/* styles.css*/</p>
+    
+        <p> .alert-text { </p>
+            <p> color: red;</p>
+        <p> } </p>
+    </div>
+
+        <p>Note the syntax for class selectors: a period immediately followed by the case-sensitive value of the class attribute.
+        Classes aren’t required to be specific to a particular element, so you can use the same class on as many elements as you
+        want.
+        </p>
+        <p>Another thing you can do with the class attribute is to add multiple classes to a single element as a space-separated
+        list, such as class="alert-text severe-alert". Since whitespace is used to separate class names like this, you should
+        never use spaces for multi-worded names and should use a hyphen instead.
+        </p>
+
+        <h3><strong>ID selectors</strong></h3>
+        <p>ID selectors are similar to class selectors. They select an element with the given ID, which is another attribute you
+        place on an HTML element. The major difference between classes and IDs is that an element can only have one ID. It
+        cannot be repeated on a single page and should not contain any whitespace:</p>
+    <div> 
+        <p>(!--  index.html --)</p>
+        <p> (div id ="title") My Awesome 90's page(/div)</p>
+        </div>
+        <p>/*styles.css*/</p>
+        <p>#title {</p>
+            <p>background-color: red;</p>
+            <p> } </p>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
