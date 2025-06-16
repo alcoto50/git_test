@@ -91,10 +91,54 @@ name of the element:</p>
             <p>background-color: red;</p>
             <p> } </p>
     </div>
+<p>For IDs, instead of a period, we use a hashtag immediately followed by the case-sensitive value of the ID attribute. A
+common pitfall is people overusing the ID attribute when they don’t necessarily need to, and when classes will suffice.
+While there are cases where using an ID makes sense or is needed, such as taking advantage of specificity or having
+links redirect to a section on the current page, you should use IDs <strong>sparingly</strong> (if at all).</p>
 
+<h3><strong>The Grouping Selector</strong></h3>
+<p>What if we have two groups of elements that share some of their style declarations?</p>
+    <div> 
+    <p> .read { </p>
+        <p> color: white;</p>
+    <p>background-color: black;</p>
+    <p> /* several unique declarations */</p>
+    <p> } </p>
+    <br>
+    <p> .unread { </p>
+        <p>color: white</p>
+        <p>background-color: black;</p>
+        <p> /*several unique declarations */</p>
+        <p> } </p>
+    </div>
 
-</div>
+    <p>Both our <em>.read</em> and<em>.unread</em> selectors share the <em>color: white;</em> and <em>background-color: black;</em>  declarations, but otherwise
+    have several of their own unique declarations. To cut down on the repetition, we can group these two selectors together
+    as a comma-separated list:
+    </p>
 
+    <div>
+        <p> .read </p>
+        <p> .unread { </p>
+            <p> color: white:</p>
+            <p>background-color: black;</p>
+            <p> } </p>
+            <br>
+            <p> .read { </p>
+                <p> /* several unique declarations */</p>
+                <p> } </p>
+                <br>
+            <p> .unread { </p>
+                <p> /*several unique declarations */</p>
+                <p> } </p>
+    </div>
+
+    <p>Both of the examples above (with and without grouping) will have the same result, but the second example reduces the
+    repetition of declarations and makes it easier to edit either the <em>color</em>  or<em>background-color</em> for both classes at once.
+    </p>
+
+    <h3><strong>Chaining selectors</strong></h3>
+     <p>Another way to use selectors is to chain them as a list without any separation. Let’s say we had the following HTML:</p>
 
 </body>
 </html>
