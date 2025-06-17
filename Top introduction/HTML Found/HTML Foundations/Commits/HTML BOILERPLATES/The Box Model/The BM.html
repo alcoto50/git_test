@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Box Model </title>
+</head>
+<body>
+    <h1><strong> The Box Model </strong></h1>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.m4Navu4yYeIl1ap13_m6YwAAAA%26pid%3DApi&f=1&ipt=5d97548e4c9b65ddf725ab3ce70d8477e5f776359e0567ed8d02fd7810439e07&ipo=images">
+    <h3><strong> Introduction</strong></h3> 
+    
+  
+    <p>Now that you understand the basic syntax of HTML and CSS, we’re going to get serious. The most important skills you need
+    to master with CSS are positioning and layout. Changing fonts and colors is a crucial skill, but being able to put
+    things exactly where you want them on a webpage is even more crucial. After all, how many webpages can you find where
+    absolutely every element is just stacked one on top of another?
+    </p>
+
+<p> Learning to position elements on a webpage is not that difficult once you understand just a few key concepts.
+Unfortunately, many learners race through learning HTML and CSS to get to JavaScript and end up missing these
+fundamental concepts. This leads to frustration and pain (and funny gifs) because all the JavaScript skills in the world
+are meaningless if you can’t stick your elements on the page where you need them to be. So with that in mind, let’s get
+started.</p>
+
+<h3><strong> Lesson Overview </strong></h3>
+<p>This section contains a general overview of topics that you will learn in this lesson.
+</p>
+<li> You’ll learn all about the box model. </li>
+<li>You’ll learn how to make sure elements are just the right size with <strong> margin </strong>,<strong>padding</strong>, and <strong>borders</strong>. </li>
+
+<h3><strong> The box Model </strong></h3>
+<p>The first important concept that you need to understand to be successful in CSS is the box model. It isn’t complicated,
+but skipping over it now would cause you much frustration down the line.</p>
+<p>Every single thing on a webpage is a rectangular box. These boxes can have other boxes in them and can sit alongside one
+another. You can get a rough idea of how this works by applying an outline to every element on the page like this:</p>
+<div>
+    <p> * { </p>
+        <p> outline: 2px solid red; </p>
+        <p> } </p>
+
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/boxes.png">
+        <p>You can use the browser’s inspector to add the CSS above to this web page if you want, by clicking the + button in the
+        top right of the “Styles” panel within the “Elements” tab. Boxes in boxes! </p>
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/odin-lined.png">
+
+        <p>OK, so there might be some circles in the above image… but when it comes to layout, they fit together like rectangular
+        boxes and not circles. In the end, laying out a webpage and positioning all its elements is deciding how you are going
+        to nest and stack these boxes.
+        </p>
+        <li><strong>padding:</strong> increases the space between the border of a box and the content of the box.</li>
+        <li><strong>border</strong> adds space (even if it’s only a pixel or two) between the margin and the padding.</li>
+        <li><strong>margin</strong> increases the space between the borders of a box and the borders of adjacent boxes.</li>
+        <p> Be sure to study the diagrams carefully.</p>
+
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/box-model.png">
+</div>
+</body>
+</html>
