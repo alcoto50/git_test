@@ -201,5 +201,187 @@ links redirect to a section on the current page, you should use IDs <strong>spar
             how deep that nesting is. Take a quick look at the example below and see if you can tell which elements would be
             selected based on the CSS rule provided:</p>
 
+            <p><strong><em>! Index.html</em></strong></p>
+            <p> div class="ancestor">
+                <p> <em>--A--</em></p>
+                <p>div class="contents"></p>
+                <p><em>--B--</em></p>
+            </p>
+            <p>div class ="contents" <em>--C--</em> (/div) </em></p>
+            <p> (/div) </p>
+
+            <p> (div class="contents" <em>--D--</em></p>
+
+            <p> <strong><em> Styles.css </em></strong></p>
+
+            <p>.ancestor .content { </p>
+                <p> *some declarations</p>
+                <p> } </p>
+                <p>In the above example, the first two elements with the contents class (B and C) would be selected, but that last element
+                (D) wouldn’t be. Was your guess correct?</p>
+            <h3>Properties to get started with</h3>
+            <p>There are some CSS properties that you’re going to be using all the time, or at the very least more often than not.
+            We’re going to introduce you to several of these properties, though this is by no means a complete list. Learning the
+            following properties will be enough to help get you started.</p>
+
+            <p><strong>Color and Background-color</strong></p>
+            <p>The color property sets an element’s text color, while background-color sets, well, the background color of an element.
+            I guess we’re done here?
+            </p>
+            <p>Almost. Both of these properties can accept one of several kinds of values. A common one is a keyword, such as an actual
+            color name like red or the transparent keyword. They also accept HEX, RGB, and HSL values, which you may be familiar
+            with if you’ve ever used a photoshop program or a site where you could customize your profile colors.
+            </p>
+            <div>
+            <p> p { </p>
+                <p><em>*hex example:*</em></p>
+                <p> color: #1100ff;</p>
+                <p> } </p>
+                <p> p { </p>
+                    <p><em>*rgb example: * </em></p>
+                    <p> color: rgb(100, 0, 127); </p>
+<p> } </p>
+<p> p { </p>
+    <p>/em * hsl example: * /em</p>
+    <p>color: hsl(15, 82%, 56%);</p>
+    <p> } </p>
+    </div>
+    <p>Take a quick look at CSS Legal Color Values to see how you can adjust the opacity of these colors by adding an alpha
+    value.
+    </p>
+
+    <h3>Typography basics and text-align</h3>
+
+    <p><strong>font-family</strong> can be a single value or a comma-separated list of values that determine what font an element uses. Each
+    font will fall into one of two categories, either a “font family name” like <strong>"Times New Roman"</strong> (we use quotes due to the
+    whitespace between words) or a “generic family name” like <strong> serif </strong> (generic family names never use quotes).</p>
+    <p>If a browser cannot find or does not support the first font in a list, it will use the next one, then the next one and
+    so on until it finds a supported and valid font. This is why it’s best practice to include a list of values for this
+    property, starting with the font you want to be used most and ending with a generic font family as a fallback, e.g.
+    <strong>font-family: "Times New Roman", serif;</strong></p>
+    <p><strong>font-size</strong> will, as the property name suggests, set the size of the font. When giving a value to this property, the value
+    should not contain any whitespace, e.g. <strong>font-size: 22px</strong> has no space between “22” and “px”.</p>
+    <p><strong>font-weight</strong> affects the boldness of text, assuming the font supports the specified weight. This value can be a keyword,
+    e.g. <strong>font-weight:</strong> bold, or a number between 1 and 1000, e.g. <strong>font-weight: 700</strong> (the equivalent of <strong>bold</strong>). Usually, the
+    numeric values will be in increments of 100 up to 900, though this will depend on the font.
+    </p>
+    <p><strong>text-align</strong> will align text horizontally within an element, and you can use the common keywords you may have come across
+    in word processors as the value for this property, e.g. <strong>text-align:</strong> center.
+    </p>
+
+    <h3><strong>Image height and width</strong></h3>
+    <p>Images aren’t the only elements that we can adjust the height and width on, but we want to focus on them specifically in
+    this case.</p>
+    <p>By default, an img element’s height and width values will be the same as the actual image file’s height and width. If
+    you wanted to adjust the size of the image without causing it to lose its proportions, you would use a value of “auto”
+    for the height property and adjust the width value:</p>
+    <br>
+    <p> img { </p>
+        <p> height: auto; </p>
+        <p> width: 500px:</p>
+        <p> } </p>
+            <p>For example, if an image’s original size was 500px height and 1000px width, using the above CSS would result in a height
+            of 250px.
+            </p>
+            <p>These properties work in conjunction with the height and width attributes in the HTML. It’s best to include both of
+            these properties and the HTML attributes for image elements, even if you don’t plan on adjusting the values from the
+            image file’s original ones. When these values aren’t included, if an image takes longer to load than the rest of the
+            page contents, it won’t take up any space on the page at first but will suddenly cause a drastic shift of the other page
+            contents once it does load in. Explicitly stating a <strong>height</strong> and <strong>width</strong> prevents this from happening, as space will be
+            “reserved” on the page and appear blank until the image loads.
+            </p>
+
+            <h3><strong>Adding CSS to HTML</strong></h3>
+            <p>Now that we’ve learned some basic syntax, you might be wondering how to add all this CSS to our HTML. There are three
+            methods to do so.</p>
+
+            <p><strong>external CSS</strong></p>
+            <p>External CSS is the most common method you will come across, and it involves creating a separate file for the CSS and
+            linking it inside of an HTML’s opening and closing
+            head tags with a void link element:</p>
+                
+                <p> --Index.html--*</p>
+                <p> head </p>
+                <p> link rel="stylesheet" href=:'styles.css'</p>
+                <p> /head </p>
+
+                <p><strong><em> *--styles.css * </em></strong></em></p>
+                <p> div { </p>
+                    <p> color: white;</p>
+                    <p>background-color: black; </p>
+                    <p> } </p>
+
+                    <p> p { </p>
+                    <p> color: red; </p>
+                    <p> } </p>
+                    <p>First, we add a void<strong>
+                    (link) </strong> element inside of the opening and closing<strong>
+                    
+                    (head) </strong> tags of the HTML file. The <strong>href</strong> attribute is the location of the CSS file, either an absolute URL or, what you’ll
+                        be utilizing, a URL relative to the location of the HTML file. In our example above, we are assuming both files are
+                        located in the same directory. The <strong> rel </strong> attribute is required, and it specifies the relationship between the HTML
+                        file and the linked file.
+                    </p>
+                    <p> Then inside of the newly created <strong>styles.css</strong> file, we have the selector (the <strong> div </strong>strong> and <strong>p</strong>, followed by a pair of opening
+                    and closing curly braces, which create a “declaration block”. Finally, we place any declarations inside of the
+                    declaration block. <strong>color: white;</strong> is one declaration, with <strong>color</strong> being the property and <strong>white</strong> being the value, and
+                    <strong>background-color: black;</strong> is another declaration.</p>
+
+                    <p>A note on file names: <strong>styles.css</strong> is just what we went with as the file name here. You can name the file whatever you
+                    want as long as the file type is <strong>.css</strong>, though “style” or “styles” is most commonly used.</p>
+                    <p>A couple of the pros to this method are:
+                    </p>
+                    <li> 1.It keeps our HTML and CSS separated, which results in the HTML file being smaller and making things look cleaner. </li>
+                    <li> 2. We only need to edit the CSS in one place, which is especially handy for websites with many pages that all share similar
+                    styles.
+                    </li>
+                    <p><strong>Internal CSS</strong></p>
+                    <p>Internal CSS (or embedded CSS) involves adding the CSS within the HTML file itself instead of creating a completely
+                    separate file. With the internal method, you place all the rules inside of a pair of opening and closing <strong>(style)</strong>
+                        tags,
+                        which are then placed inside of the opening and closing <strong>(head)</strong>tags of your HTML file. Since the styles are being placed directly inside of the <strong>(head)</strong>tags,
+                        we no longer need a <strong>(link)</strong>element that the external method requires.
+                    </p>
+                    <p>Besides these differences, the syntax is exactly the same as the external method (selector, curly braces, declarations):</p>
+                    <div>
+                        <p> (head) </p>
+                        <p> (style) </p>
+                        <p> div { </p>
+                            <p> color:white; </p>
+                            <p> background_color: black; </p>
+                            <p> } </p>
+                            <br>
+                            <p> p { </p>
+                                <p> color: red; </p>
+                                <p> } </p>
+                                <p> (/styles) </p>
+                                <p> (/head) </p>
+                                <p> (body)
+                                <p> (/body) </p>
+                    </div>
+                    <p>This method can be useful for adding unique styles to a single page of a website, but it doesn’t keep things separate
+                    like the external method, and depending on how many rules and declarations there are it can cause the HTML file to get
+                    pretty big.
+                    </p>
+
+                    <p><strong> Inline CSS </strong></p>
+                    <p>Inline CSS makes it possible to add styles directly to HTML elements, though this method isn’t as recommended:</p>
+                    <br>
+                    <p> (body) </p>
+                    <p> (div style ="color: white; background-color: black;"...(/div)<p>
+                        <p> (/body) </p>
+
+                        <p> The first thing to note is that we don’t actually use any selectors here, since the styles are being added directly to
+                        the opening <strong>(div)</strong> tag itself. Next, we have the <strong>style=</strong> attribute, with its value within the pair of quotation marks
+                            being the declarations.</p>
+                            <p> If you need to add a unique style for a single element, this method can work just fine. Generally, though, this isn’t
+                            exactly a recommended way for adding CSS to HTML for a few reasons:</p>
+                            <li> It can quickly become pretty messy once you start adding a lot of declarations to a single element, causing your HTML
+                            file to become unnecessarily bloated.</li>
+                            <li> If you want many elements to have the same style, you would have to copy and paste the same style to each individual
+                            element, causing lots of unnecessary repetition and more bloat.</li>
+                            <li> Any inline CSS will override the other two methods, which can cause unexpected results. (While we won’t dive into it
+                            here, this can actually be taken advantage of.)
+                            </li>
 </body>
 </html>
