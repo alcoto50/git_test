@@ -25,3 +25,7 @@ This is called nesting and to show a element that contains a nested Tag, we usua
 (side note: It's kind of crucial to get the html/css/javascript foundations soon so that I do not loose anything from my coding course and that I can still be viable in the workforce. Alot of times people take these bootcamps then forget everything not long after getting out. I refuse to let that happens!)
 
 6/16 5:30-?: Morning! Just waking up and making some coffee and going through all the other morning rituals. Today I am starting on CSS so kind of sharpening my typing skills before I dive in. So lets go!!!!
+
+6/16 5:50am-9am: Still working on my html file regarding css. This is really getting tedious but learning about CSS with all reading c&p and making key words <strong>. Also trying to use other html elements but hasn't called for much listing.
+
+6/17 8am-Noon: Up and before I wanted to start this CSS portion wanted to have an overview to better understand the syntax and other importont rules. So have a basic understanding of the css set Selector and a property/value pair. The

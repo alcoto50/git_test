@@ -25,12 +25,14 @@
     <p>At the most basic level, CSS is made up of various rules. These rules are made up of a selector (more on this in a bit)
     and a semicolon-separated list of declarations, with each of those declarations being made up of a property–value pair.</p>
 <img src ="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg">
-<p><em>Note:</em></p> <p>A div element is one of the basic HTML elements. It is an empty container. In general, it is best to use other tags such as (h1) or (p) for content in your projects, but as we learn more about CSS you’ll find that there are many cases wherethe thing you need is just a container for other elements. Many of our exercises use plain (div)s for simplicity. Later lessons will go into much more depth about when it is appropriate to use the various HTML elements.</p>
+
+<p><strong>Note:</strong></p> <p>A div element is one of the basic HTML elements. It is an empty container. In general, it is best to use other tags such as (h1) or (p) for content in your projects, but as we learn more about CSS you’ll find that there are many cases wherethe thing you need is just a container for other elements. Many of our exercises use plain (div)s for simplicity. Later lessons will go into much more depth about when it is appropriate to use the various HTML elements.</p>
 
 <h3><strong>Selectors</strong></h3>
 <p>Selectors refer to the HTML elements to which CSS rules apply; they’re what is actually being “selected” for each rule.
 The following subsections don’t cover every selector available, but they’re by far the most common and the ones you
 should get comfortable using first.</p>
+
 <h3>Universal Selector</h3>
 <p>The universal selector will select elements of every type (as in the whole document), hence the name “universal”, and
 the syntax for it is a simple asterisk. In the example below, every element would have the color: purple; style applied
@@ -42,34 +44,41 @@ to it.</p>
 </div>
 
 <h3>Type selector</h3>
-  <p>A type selector (or element selector) will select all elements of the given element type, and the syntax is just the
+  <p>A type selector or (<strong> element selector </strong>) will select all elements of the given element type, and the syntax is just the
 name of the element:</p>
+<!--Instead of using element tags <> I am using ()-->
     <div>
-    <p><!--index.html --></p>
+    <p><em>(!--index.html --)</em></p>
     
-    <p>(div)Hello, World!(/div)</p>
-    <p>(div)Hello again!(/div)</p>
-    <p>(p)Hi..(/p)</p>
-    <p>(div)Okay, bye.(/div)</p>
+    <p><strong>(div)</strong> Hello, World! <strong>(/div)</strong></p>
+
+    <p><strong>(div)</strong> Hello, again! <strong>(/div)</strong></p>
+
+    <p> (p)Hi..(/p)</p>
+
+    <p><strong>(div)</strong>Okay, bye.<strong>(/div)</strong></p>
     </div>
 
-    <p>Here, all three (div) elements would be selected, while the (p) element wouldn't be.</p>
+    <p>Here, all three (<strong>div elements would be selected, while the (p) element wouldn't be.</strong></p><br>
 
-    <h3><strong>Class Selector</strong></h3>
+    <h3>Class Selector</h3>
+
     <p>Class selectors will select all elements with the given class, which is just an attribute you place on an HTML element.
     Here’s how you add a class to an HTML tag and select it in CSS:</p>
     <div>
-        <p> (!-- index.html --)</p>
-        
-        <p>(div class="alert-text") Please agree to our terms of service.)</p>
-        <p>/* styles.css*/</p>
+        <p> <strong><em>(!-- index.html --)</em></strong></p> <!--using () instead of <>-->
+     </div>
+     <div>   
+        <p>(div class="<strong>alert-text</strong>") Please agree to our terms of service.)</p>
+        <!--using () instead of <>-->
+        <p><em>/* styles.css*/</em></p>
     
-        <p> .alert-text { </p>
+        <p> <strong>.alert-text</strong> { </p>
             <p> color: red;</p>
         <p> } </p>
     </div>
 
-        <p>Note the syntax for class selectors: a period immediately followed by the case-sensitive value of the class attribute.
+        <p>Note the syntax for class selectors:<bold> a period immediately followed by the case-sensitive value of the class attribute.</bold>
         Classes aren’t required to be specific to a particular element, so you can use the same class on as many elements as you
         want.
         </p>
@@ -79,15 +88,15 @@ name of the element:</p>
         </p>
 
         <h3><strong>ID selectors</strong></h3>
-        <p>ID selectors are similar to class selectors. They select an element with the given ID, which is another attribute you
-        place on an HTML element. The major difference between classes and IDs is that an element can only have one ID. It
+        <p><strong>ID selectors</strong> are similar to class selectors. They select an element with the given <strong>ID,</strong> which is another attribute you
+        place on an HTML element. The major difference between classes and IDs is that an element can only have <strong>one ID</strong>. It
         cannot be repeated on a single page and should not contain any whitespace:</p>
     <div> 
-        <p>(!--  index.html --)</p>
-        <p> (div id ="title") My Awesome 90's page(/div)</p>
+        <p><strong><em>(!--  index.html --)</em></strong></p>
+        <p><strong> (div id ="title")</strong> My Awesome 90's page(/div)</p>
         </div>
         <p>/*styles.css*/</p>
-        <p>#title {</p>
+        <p><strong>#title</strong> {</p>
             <p>background-color: red;</p>
             <p> } </p>
     </div>
@@ -112,9 +121,9 @@ links redirect to a section on the current page, you should use IDs <strong>spar
         <p> } </p>
     </div>
 
-    <p>Both our <em>.read</em> and<em>.unread</em> selectors share the <em>color: white;</em> and <em>background-color: black;</em>  declarations, but otherwise
+    <p>Both our <strong>.read</strong> and<strong>.unread</strong> selectors share the <strong>color: white;</strong> and <strong>background-color: black;</strong>  declarations, but otherwise
     have several of their own unique declarations. To cut down on the repetition, we can group these two selectors together
-    as a comma-separated list:
+    as a <strong>comma-separated list:</strong>
     </p>
 
     <div>
@@ -123,22 +132,74 @@ links redirect to a section on the current page, you should use IDs <strong>spar
             <p> color: white:</p>
             <p>background-color: black;</p>
             <p> } </p>
-            <br>
+            
+            <p>The css below will also work but your using more space.</p>
             <p> .read { </p>
                 <p> /* several unique declarations */</p>
                 <p> } </p>
-                <br>
+                
             <p> .unread { </p>
                 <p> /*several unique declarations */</p>
                 <p> } </p>
     </div>
 
     <p>Both of the examples above (with and without grouping) will have the same result, but the second example reduces the
-    repetition of declarations and makes it easier to edit either the <em>color</em>  or<em>background-color</em> for both classes at once.
+    repetition of declarations and makes it easier to edit either the <strong>color</strong>  or<strong> background-color</strong> for both classes at once.
     </p>
 
     <h3><strong>Chaining selectors</strong></h3>
      <p>Another way to use selectors is to chain them as a list without any separation. Let’s say we had the following HTML:</p>
+     <div>
+        <p><strong><em>( html.index )</em></strong></p>
+        <p> (div) </p>
+        <p> (div class="subsection header">Latest Posts(/div)</p>
+        <p> (p class="subsection preview">This is where a preview for post might go.(/p)</p>
+     </div>
+
+     <p>We have two elements with the <strong>subsection</strong> class that have some sort of unique styles, buemt what if we only want to apply a
+    separate rule to the element that also has <strong>header</strong> as a second class? Well, we could chain both the class selectors
+    together in our CSS like so:
+     </p>
+     <div>
+        <p> .subscription.header { </p>
+            <p> color: red; </p>
+            <p> } </p>
+     </div>
+     <p>What <strong>.subsection.header</strong> does is it selects any element that has both the <strong>subsection</strong> and <strong>header</strong> classes. Notice how there
+    isn’t any space between the <strong>.subsection</strong> and <strong> .header </strong> class selectors. This syntax basically works for chaining any combination of selectors, except for chaining more than one <em>type selector</em>.
+     </p>
+     <p>This can also bne used to chain a class and an <strong>ID</strong> as shown below:</p>
+
+    <p> (div) </p>
+    <p> (div class ="subsection header") latest post (/div)</p>
+    <p> (p class ="subsection" id="preview") </p>
+    <p><em> This is where a preview for a post might go</em></p>
+    <p> (/p) </p>
+    <p> (/div) </p>
+    <p> You can take the two elements above and combine them with the following</p>
+
+    <p> .subsection.header { </p>
+        <p> color: red; </p>
+        <p> } </p>
+        <p> .subsection#preview { </p>
+            <p> color: blue </p>
+            <p> } </p>
+
+            <p>In general, you can’t chain more than one type selector since an element can’t be two different types at once. For
+            example, chaining two type selectors like div and p would give us the selector divp, which wouldn’t work since the
+            selector would try to find a literal <divp> element, which doesn’t exist.
+            </p>
+
+            <h3>Descendant combinator</h3>
+            <p>Combinators allow us to combine multiple selectors differently than either grouping or chaining them, as they show a
+            relationship between the selectors. There are four types of combinators in total, but for right now we’re going to only
+            show you the <strong><em>descendant combinator, which is represented in CSS by a single space between selectors</em></strong>. 
+     It will only cause elements that match the last selector to be selected if they also have an ancestor (parent,
+            grandparent, etc.) that matches the previous selector.</p>
+            <p>So something like .ancestor .child would select an element with the class child if it has an ancestor with the class
+            ancestor. Another way to think of it is that child will only be selected if it is nested inside ancestor, regardless of
+            how deep that nesting is. Take a quick look at the example below and see if you can tell which elements would be
+            selected based on the CSS rule provided:</p>
 
 </body>
 </html>
